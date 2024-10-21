@@ -1,0 +1,163 @@
+:root {
+    --black: #000;
+    --white: #ffffff;
+    --lightgrey: #f1f1f1;
+    --darkblue: #0d102c;
+    --primarycolor: #3d51f2;
+    --secondarycolor: #5670ef;
+    --lightDark: #080A25;
+    --darkText: #8388B4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--darkblue);
+    color: var(--white);
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--lightDark);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.support-btn, .logout-btn {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--primarycolor);
+    color: var(--white);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    color: var(--darkText);
+}
+
+.user-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.overview, .wallet-overview, .chart, .transactions, .referral-program {
+    background-color: var(--lightDark);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--darkblue);
+    border-radius: 8px;
+    border: 1px solid var(--darkText);
+}
+
+.wallet-cards {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.wallet-card {
+    min-width: 150px;
+    padding: 1rem;
+    background-color: var(--darkblue);
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--darkText);
+}
+
+.wallet-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--darkText);
+}
+
+#referralLink {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: var(--darkblue);
+    border-radius: 4px;
+    border: 1px solid var(--darkText);
+    color: var(--darkText);
+}
+
+#copyReferralLink {
+    padding: 0.5rem 1rem;
+    background-color: var(--primarycolor);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#referralStats {
+    margin-top: 1rem;
+    color: var(--darkText);
+}
+
+/* Add some hover effects for better interactivity */
+.support-btn:hover, .logout-btn:hover, #copyReferralLink:hover {
+    background-color: var(--secondarycolor);
+}
+
+.wallet-card:hover, .stat-card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+    border-color: var(--primarycolor);
+}
+
+h1, h2, h3 {
+    color: var(--white);
+}
+
+p, span {
+    color: var(--darkText);
+}

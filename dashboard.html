@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Prouple</h1>
+            <div class="user-menu">
+                <button class="support-btn">Support</button>
+                <div class="user-profile">
+                    <img src="user-avatar.jpg" alt="User Avatar">
+                    <span>User Name</span>
+                </div>
+                <button id="logoutButton" class="logout-btn">Logout</button>
+            </div>
+        </header>
+        <main>
+            <div class="dashboard-content">
+                <section class="overview">
+                    <div class="stat-card">
+                        <h2>2,345</h2>
+                        <p>Wallets</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2>$1.2M</h2>
+                        <p>Total Value</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2>15%</h2>
+                        <p>Growth</p>
+                    </div>
+                </section>
+                <section class="wallet-overview">
+                    <h2>Your Wallets</h2>
+                    <div class="wallet-cards">
+                        <div class="wallet-card">
+                            <img src="bitcoin-icon.png" alt="Bitcoin">
+                            <h3>BTC</h3>
+                            <p>Bitcoin</p>
+                            <span class="balance">0.5634</span>
+                        </div>
+                        <div class="wallet-card">
+                            <img src="ethereum-icon.png" alt="Ethereum">
+                            <h3>ETH</h3>
+                            <p>Ethereum</p>
+                            <span class="balance">1.46</span>
+                        </div>
+                        <!-- Add more wallet cards as needed -->
+                    </div>
+                </section>
+                <section class="chart">
+                    <h2>Bitcoin Chart</h2>
+                    <div class="chart-container">
+                        <!-- You'll need to use a charting library like Chart.js to create the actual chart -->
+                    </div>
+                </section>
+                <section class="transactions">
+                    <h2>Recent Transactions</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023-05-15</td>
+                                <td>0.005 BTC</td>
+                                <td>Sent</td>
+                            </tr>
+                            <!-- Add more transaction rows as needed -->
+                        </tbody>
+                    </table>
+                </section>
+                <section class="referral-program">
+                    <h2>Referral Program</h2>
+                    <div id="referralLink"></div>
+                    <button id="copyReferralLink">Copy Link</button>
+                    <div id="referralStats">
+                        <p>Users joined through your referral: <span id="referralCount">0</span></p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="dashboard-script.js"></script>
+</body>
+</html>
